@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "913820375459",
+    "project_id": "chatterverse-42945",
+    "storage_bucket": "chatterverse-42945.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:913820375459:android:9707f771225c72598a2216",
+        "android_client_info": {
+          "package_name": "com.example.chatterverse"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        { 
+          "current_key": "AIzaSyD1Gf6VxT1Bf_NrNdko1ie59iR-3gsPeew"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
