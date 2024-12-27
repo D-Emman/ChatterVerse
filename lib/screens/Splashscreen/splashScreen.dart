@@ -47,8 +47,7 @@ class _SplashscreenState extends State<Splashscreen> {
                         fontFamily: 'Poppins',
                         color: constantColors.blueColor,
                         fontWeight: FontWeight.bold,
-                        fontSize: 30.0)
-                        )
+                        fontSize: 30.0))
               ])),
         ));
   }

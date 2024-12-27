@@ -23,6 +23,7 @@ class Landingpage extends StatelessWidget {
     );
   }
 
+
   bodyColor() {
     return Container(
       decoration: BoxDecoration (
