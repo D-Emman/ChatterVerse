@@ -9,7 +9,7 @@ ConstantColors constantColors = ConstantColors();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: constantColors.blueGreyColor,
+        backgroundColor: constantColors.lightBlueColor,
     );
   }
 }
