@@ -1,5 +1,8 @@
+import 'package:chatterverse/screens/Homepage/hompageHelpers.dart';
 import 'package:chatterverse/screens/Landingpage/landingHelpers.dart';
 import 'package:chatterverse/screens/Landingpage/landingServices.dart';
+import 'package:chatterverse/screens/Landingpage/landingUtils.dart';
+import 'package:chatterverse/screens/Profile/profileHelpers.dart';
 import 'package:chatterverse/screens/Splashscreen/splashScreen.dart';
 import 'package:chatterverse/services/Authentication.dart';
 import 'package:chatterverse/services/firebaseOperations.dart';
@@ -39,6 +42,9 @@ class MyApp extends StatelessWidget {
               canvasColor: Colors.transparent),
         ),
         providers: [
+          ChangeNotifierProvider(create: (_) => ProfileHelpers()),
+          ChangeNotifierProvider(create: (_) => HomepageHelpers()),
+          ChangeNotifierProvider(create: (_) => Landingutils()),
           ChangeNotifierProvider(create: (_) => Firebaseoperations()),  
           ChangeNotifierProvider(create: (_) => Authentication()),
           ChangeNotifierProvider(create: (_) => LandingHelpers()),

@@ -30,6 +30,7 @@ environment:
 dependencies:
   cloud_firestore: ^5.6.0
   cupertino_icons: ^1.0.2
+  custom_navigation_bar: ^0.8.2
   eva_icons_flutter: ^3.1.0
   firebase_auth: ^5.3.4
   firebase_core: ^3.9.0
@@ -57,7 +58,9 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   assets:
-   - assets/images/login.jpg
+    - assets/images/login.jpg
+    - assets/images/empty.jpg
+    
   fonts:
     - family: Poppins
       fonts:

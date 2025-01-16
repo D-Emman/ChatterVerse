@@ -6,8 +6,9 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class Firebaseoperations with ChangeNotifier {
-   // UploadTask imageUploadTask;
+  // UploadTask imageUploadTask;
   var imageUploadTask;
+  var initUserEmail, initUserName, initUserImage;
 
   Future uploadUserAvatar(BuildContext context) async {
     Reference imageReference = FirebaseStorage.instance.ref().child(
@@ -30,8 +31,28 @@ class Firebaseoperations with ChangeNotifier {
     return FirebaseFirestore.instance
         .collection('users')
         .doc(Provider.of<Authentication>(context, listen: false).getUserid)
-        .set(
-      data
-    );
+        .set(data);
+  }
+
+  Future initUserData(BuildContext context) async {
+    return FirebaseFirestore.instance
+        .collection('users')
+        .doc(Provider.of<Authentication>(context, listen: false).getUserid)
+        .get()
+        .then((doc) {
+      print('Fetching user data');
+      initUserName = doc.data()?['username'];
+      initUserEmail = doc.data()?['useremail'];
+      initUserImage = doc.data()?['userimage'];
+      print(initUserName);
+      print(initUserEmail);
+      print(initUserImage);
+      notifyListeners();
+      // if (doc.data()!.isEmpty) {
+      //   print('Document does not exist');
+      // } else {
+      //   print('Document exists');
+      // }
+    });
   }
 }
